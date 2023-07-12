@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tagforce-essentials", "tagforce-essentials.csproj", "{F3151BBF-4CF3-43D0-97DC-66D4B068992B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3151BBF-4CF3-43D0-97DC-66D4B068992B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3151BBF-4CF3-43D0-97DC-66D4B068992B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3151BBF-4CF3-43D0-97DC-66D4B068992B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3151BBF-4CF3-43D0-97DC-66D4B068992B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0137F15-88F2-4B7F-8FB4-B1AB3EB9EF6E}
+	EndGlobalSection
+EndGlobal
