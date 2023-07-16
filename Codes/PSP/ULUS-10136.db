@@ -55,7 +55,7 @@ _L 0x2009453C 0x10400029 // Jump out to address if result of memcmp is 0
 _L 0x20094540 0x3C050889 // Load %hi of "deck/all_" into a1
 _L 0x20094544 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x20094548 0x0E204486 // Call strcmp
-_L 0x2009454C 0x24A5468A // Load %lo of "deck/all_" into a1
+_L 0x2009454C 0x24A5468C // Load %lo of "deck/all_" into a1
 _L 0x20094550 0x1040001E // Jump out to address if result of strcmp is 0
 _L 0x20094554 0x24060009 // Store 0x9 in a2 (we use this to compare only up to "deck/all_" so that every permutation gets loaded from memstick)
 _L 0x20094558 0x2484FFF6 // Restore a0's original value by shifting it back by 10 bytes
@@ -65,27 +65,27 @@ _L 0x20094564 0x1040001F // Jump out to address if result of memcmp is 0
 _L 0x20094568 0x3C050889 // Load %hi of "movie/rampart_summon_a.pmf" into a1
 _L 0x2009456C 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x20094570 0x0E204486 // Call strcmp
-_L 0x20094574 0x24A54694 // Load %lo of "movie/rampart_summon_a.pmf" into a1
+_L 0x20094574 0x24A54698 // Load %lo of "movie/rampart_summon_a.pmf" into a1
 _L 0x20094578 0x1040001A // Jump out to address if result of strcmp is 0
 _L 0x2009457C 0x3C050889 // Load %hi of "movie/rampart_attack_a.pmf" into a1
 _L 0x20094580 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x20094584 0x0E204486 // Call strcmp
-_L 0x20094588 0x24A546B0 // Load %lo of "movie/rampart_attack_a.pmf" into a1
+_L 0x20094588 0x24A546B4 // Load %lo of "movie/rampart_attack_a.pmf" into a1
 _L 0x2009458C 0x10400015 // Jump out to address if result of strcmp is 0
 _L 0x20094590 0x3C050889 // Load %hi of "movie/cyb_summon_a.pmf" into a1
 _L 0x20094594 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x20094598 0x0E204486 // Call strcmp
-_L 0x2009459C 0x24A546CB // Load %lo of "movie/cyb_summon_a.pmf" into a1
+_L 0x2009459C 0x24A546D0 // Load %lo of "movie/cyb_summon_a.pmf" into a1
 _L 0x200945A0 0x10400010 // Jump out to address if result of strcmp is 0
 _L 0x200945A4 0x3C050889 // Load %hi of "movie/cyb_attack_a.pmf" into a1
 _L 0x200945A8 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x200945AC 0x0E204486 // Call strcmp
-_L 0x200945B0 0x24A546E2 // Load %lo of "movie/cyb_attack_a.pmf" into a1
+_L 0x200945B0 0x24A546E8 // Load %lo of "movie/cyb_attack_a.pmf" into a1
 _L 0x200945B4 0x1040000B // Jump out to address if result of strcmp is 0
 _L 0x200945B8 0x3C050889 // Load %hi of "movie/ouijaboard_final.pmf" into a1
 _L 0x200945BC 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x200945C0 0x0E204486 // Call strcmp
-_L 0x200945C4 0x24A546F9 // Load %lo of "movie/ouijaboard_final.pmf" into a1
+_L 0x200945C4 0x24A54700 // Load %lo of "movie/ouijaboard_final.pmf" into a1
 _L 0x200945C8 0x10400006 // Jump out to address if result of strcmp is 0
 _L 0x200945CC 0x0300F821 // Restore ra from t8
 _L 0x200945D0 0x03202021 // Restore a0 from t9
@@ -129,53 +129,49 @@ _L 0x20094684 0x7261632F
 _L 0x20094688 0x00000064
 
 // Store "deck/all_" in memory
-_L 0x2009468A 0x6B636564
-_L 0x2009468E 0x6C6C612F
-_L 0x20094692 0x0000005F
+_L 0x2009468C 0x6B636564
+_L 0x20094690 0x6C6C612F
+_L 0x20094694 0x0000005F
 
 // Store "movie/rampart_summon_a.pmf" in memory
-_L 0x20094694 0x69766F6D
-_L 0x20094698 0x61722F65
-_L 0x2009469C 0x7261706D
-_L 0x200946A0 0x75735F74
-_L 0x200946A4 0x6E6F6D6D
-_L 0x200946A8 0x702E615F
-_L 0x200946AC 0x0000666D
+_L 0x20094698 0x69766F6D
+_L 0x2009469C 0x61722F65
+_L 0x200946A0 0x7261706D
+_L 0x200946A4 0x75735F74
+_L 0x200946A8 0x6E6F6D6D
+_L 0x200946AC 0x702E615F
+_L 0x200946B0 0x0000666D
 
 // Store "movie/rampart_attack_a.pmf" in memory
-_L 0x200946B0 0x69766F6D
-_L 0x200946B4 0x61722F65
-_L 0x200946B8 0x7261706D
-_L 0x200946BC 0x74615F74
-_L 0x200946C0 0x6B636174
-_L 0x200946C4 0x702E615F
-_L 0x100946C8 0x0000666D
-_L 0x000946CA 0x00000000
+_L 0x200946B4 0x69766F6D
+_L 0x200946B8 0x61722F65
+_L 0x200946BC 0x7261706D
+_L 0x200946C0 0x74615F74
+_L 0x200946C4 0x6B636174
+_L 0x200946C8 0x702E615F
+_L 0x200946CC 0x0000666D
 
 // Store "movie/cyb_summon_a.pmf" in memory
-_L 0x200946CB 0x69766F6D
-_L 0x200946CF 0x79632F65
-_L 0x200946D3 0x75735F62
-_L 0x200946D7 0x6E6F6D6D
-_L 0x200946DB 0x702E615F
-_L 0x100946DF 0x0000666D
-_L 0x000946E1 0x00000000
+_L 0x200946D0 0x69766F6D
+_L 0x200946D4 0x79632F65
+_L 0x200946D8 0x75735F62
+_L 0x200946DC 0x6E6F6D6D
+_L 0x200946E0 0x702E615F
+_L 0x100946E4 0x0000666D
 
 // Store "movie/cyb_attack_a.pmf" in memory
-_L 0x200946E2 0x69766F6D
-_L 0x200946E6 0x79632F65
-_L 0x200946EA 0x74615F62
-_L 0x200946EE 0x6B636174
-_L 0x200946F2 0x702E615F
-_L 0x100946F6 0x0000666D
-_L 0x000946F8 0x00000000
+_L 0x200946E8 0x69766F6D
+_L 0x200946EC 0x79632F65
+_L 0x200946F0 0x74615F62
+_L 0x200946F4 0x6B636174
+_L 0x200946F8 0x702E615F
+_L 0x100946FC 0x0000666D
 
 // Store "movie/ouijaboard_final.pmf" in memory
-_L 0x200946F9 0x69766F6D
-_L 0x200946FD 0x756F2F65
-_L 0x20094701 0x62616A69
-_L 0x20094705 0x6472616F
-_L 0x20094709 0x6E69665F
-_L 0x2009470D 0x702E6C61
-_L 0x10094711 0x0000666D
-_L 0x00094713 0x00000000
+_L 0x20094700 0x69766F6D
+_L 0x20094704 0x756F2F65
+_L 0x20094708 0x62616A69
+_L 0x2009470C 0x6472616F
+_L 0x20094710 0x6E69665F
+_L 0x20094714 0x702E6C61
+_L 0x10094718 0x0000666D
