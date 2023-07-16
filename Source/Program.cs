@@ -19,6 +19,11 @@ using (var stream = File.OpenRead(args[0]))
     bool isEuropean = false;
 
     var hash = VerifyFileIntegrity(stream);
+    if (String.IsNullOrEmpty(hash))
+    {
+        Console.WriteLine($"Incorrect game backup detected.\nPlease provide a clean backup of either ULES-00600 or ULUS-10136.\nULES-00600 MD5: {HashEuropean.Replace('-', new())}\nULUS-10136 MD5: {HashAmerican.Replace('-', new())}");
+    }
+
     if (hash == HashEuropean)
         isEuropean = true;
 
