@@ -46,16 +46,16 @@ _L 0x20094518 0x1440002C // Jump out if it is
 _L 0x2009451C 0x024F102A // Check if s2 is less than t7
 _L 0x20094520 0x14400001 // Continue custom code if it is
 _L 0x20094524 0x0A2224FF // Jump out if it isn't
-_L 0x20094528 0x3C050889 // Load %hi of "card/cardh_e.cip" into a1
+_L 0x20094528 0x3C050889 // Load %hi of "card/card" into a1
 _L 0x2009452C 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x20094530 0x24060009 // Store 0x9 in a2 (we use this to compare only up to "card/card" so that every permutation gets loaded from memstick)
 _L 0x20094534 0x0E203726 // Call memcmp
-_L 0x20094538 0x24A54680 // Load %lo of "card/cardh_e.cip" into a1
+_L 0x20094538 0x24A54680 // Load %lo of "card/card" into a1
 _L 0x2009453C 0x10400029 // Jump out to address if result of memcmp is 0
-_L 0x20094540 0x3C050889 // Load %hi of "deck/all_j.ehp" into a1
+_L 0x20094540 0x3C050889 // Load %hi of "deck/all_" into a1
 _L 0x20094544 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x20094548 0x0E204486 // Call strcmp
-_L 0x2009454C 0x24A5468A // Load %lo of "deck/all_j.ehp" into a1
+_L 0x2009454C 0x24A5468A // Load %lo of "deck/all_" into a1
 _L 0x20094550 0x1040001E // Jump out to address if result of strcmp is 0
 _L 0x20094554 0x24060009 // Store 0x9 in a2 (we use this to compare only up to "deck/all_" so that every permutation gets loaded from memstick)
 _L 0x20094558 0x2484FFF6 // Restore a0's original value by shifting it back by 10 bytes
