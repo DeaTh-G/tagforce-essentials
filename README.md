@@ -9,6 +9,9 @@ All in-game selectable languages are supported.**
 
 - Japanese Point Gauge Display
   - Allows the game to use the Point Gauge from the Japanese version of the game for the ATK/DEF display of a monster, and Life Points displayed in the 3D cutscenes in duels.
+<div align="center">
+	<img src="./Images/ExamplePointGauge1.png" align="center" width=400/> <img src="./Images/ExamplePointGauge2.png" align="center" width=400/>
+</div><br/>
 
 - Uncensored Cards
   - Allows the game to display the Japanese Artwork of cards whilst keeping the game's currently selected language.
