@@ -18,7 +18,11 @@ All in-game selectable languages are supported.**
 <div align="center">
 	<img src="./Images/ExampleCensoredFMV1.png" align="center" width=400/> -> <img src="./Images/ExampleUncensoredFMV1.png" align="center" width=400/>
 </div><br/>
- 
+
+<div align="center">
+	<img src="./Images/ExampleCensoredSpiritMessage1.png" align="center" width=400/> -> <img src="./Images/ExampleUncensoredSpiritMessage1.png" align="center" width=400/>
+</div><br/>
+	
 # Installation (Real Hardware)
 The following installation guide assumes you have already set up your PSP with Custom Firmware and your choice of a cheat engine (TempAR/CWCheat). 
 
