@@ -45,7 +45,9 @@ The following installation guide assumes you have already set up your PSP with C
 6. If you've done everything correctly after turning the cheats on  in PPSSPP the mods should now work (certain areas may need to be reloaded if you enable the codes while in them, for example: if the codes are enabled in the Shop the Shop area might need to be reloaded for the codes to work).
 
 # Known Issues
-- TempAR will fail to boot the game on real hardware if the patches are enabled by default. This can be bypassed by bringing up TempAR's menu before the game can load after the PSP logo disappears and waiting for the memory stick reading message of the game to pop-up. Alternatively only enable the codes whilst the game is running. Both the bypass and the latter can result in the Title Screen voice not playing after the game has booted up, because the game loads the title screen's code very early on.
+- TempAR will fail to boot the game on real hardware if the patches are enabled by default.
+  - This can be bypassed by bringing up TempAR's menu before the game can load after the PSP logo disappears and waiting for the memory stick reading message of the game to pop-up.
+  - Alternatively only enable the codes whilst the game is running. Both the bypass and the latter can result in the Title Screen voice not playing after the game has booted up, because the game loads the title screen's code very early on.
 - CWCheat will fail to apply the cheats fast enough for the game to be able to play the Title Screen voices on boot as the title screen code gets loaded very early on.
 
 # Nuget Packages
