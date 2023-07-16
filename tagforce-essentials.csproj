@@ -8,4 +8,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="DiscUtils" Version="0.16.13" />
+    <PackageReference Include="PleOps.XdeltaSharp" Version="1.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="XDelta\**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Codes\**">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
