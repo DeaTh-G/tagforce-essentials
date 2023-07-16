@@ -14,7 +14,7 @@ All in-game selectable languages are supported.**
 </div><br/>
 
 - Uncensored Cards
-  - Allows the game to display the Japanese Artwork of cards whilst keeping the game's currently selected language.
+  - Allows the game to display the Japanese Artwork of cards, Uncensored FMVs for special monster animations and other card related effects whilst keeping the game's currently selected language.
  
 # Installation (Real Hardware)
 The following installation guide assumes you have already set up your PSP with Custom Firmware and your choice of a cheat engine (TempAR/CWCheat). 
