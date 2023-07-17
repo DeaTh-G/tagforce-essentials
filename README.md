@@ -69,4 +69,4 @@ The following installation guide assumes you have already set up your PSP with C
 - [DiscUtils](https://github.com/DiscUtils/DiscUtils) - Allowing ISO files to be loaded and extracted in C#.
 
 # Special Thanks
-- [Matheus Abreu](https://gbatemp.net/members/matheus-abreu.400265/) - Creator of the original Japanese Voice Enabler xdelta patches that were used for researching how to enable the voices from the game's code directly.
+- [Matheus Abreu](https://gbatemp.net/members/matheus-abreu.400265/) - Creator of the [original Japanese Voice Enabler xdelta patches](https://gbatemp.net/threads/release-enable-japanese-voice-acting-in-yu-gi-oh-gx-tag-force-usa.572290/) that were used for researching how to enable the voices from the game's code directly.
