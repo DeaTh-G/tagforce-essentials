@@ -33,7 +33,7 @@ The following installation guide assumes you have already set up your PSP with C
 4. Install the Codes from the `Codes\PSP` folder for your region of the game to TempAR or CWCheat.
 5. Turn on the installed cheats in TempAR or CWCheat.
 6. Unplug the PSP and boot up the game and enable the cheats inside TempAR/CWCheat).
-7. if you've done everything correctly after turning the cheats on in TempAR or CWCheat the mods should now work (certain areas may need to be reloaded if you enable the codes while in them, for example: if the codes are enabled in the Shop the Shop area might need to be reloaded for the codes to work).
+7. If you've done everything correctly after turning the cheats on in TempAR or CWCheat the mods should now work (certain areas may need to be reloaded if you enable the codes while in them, for example: if the codes are enabled in the Shop the Shop area might need to be reloaded for the codes to work).
 
 # Installation (Emulator)
 1. Download the latest version of [PPSSPP](https://www.ppsspp.org/).
