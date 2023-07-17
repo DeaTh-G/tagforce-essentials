@@ -43,10 +43,14 @@ The following installation guide assumes you have already set up your PSP with C
    - (Alternatively run the exe in command line as the following: `tagforce-essentials.exe <path_to_iso>`)
 2. Connect your PSP with USB to copy files to Memory Stick.
 3. Copy the generated `PSP` folder and its contents to the Memory Stick's root.
-4. Install the Codes from the `Codes\PSP` folder for your region of the game to TempAR or CWCheat.
-5. Turn on the installed cheats in TempAR or CWCheat.
-6. Unplug the PSP and boot up the game and enable the cheats inside TempAR/CWCheat).
-7. If you've done everything correctly after turning the cheats on in TempAR or CWCheat the mods should now work (certain areas may need to be reloaded if you enable the codes while in them, for example: if the codes are enabled in the Shop the Shop area might need to be reloaded for the codes to work).
+4. Install the cheats found in the `Codes\PSP` folder to your installed Cheat Engine of choice.
+   1. TempAR:
+      - Copy the appropriate `*.db` file for your region of the game from `Codes\PSP\TempAR\` to `<psp_root>\seplugins\TempAR\cheats\`.
+   2. CWCheat:
+      - Copy the contents of the appropriate `*.db` file for your region of the game from `Codes\PSP\CWCheat\` into the `CHEAT.db` file found in `<psp_root>\seplugins\cwcheat\`.
+5. Unplug the PSP and boot up the game and enable the cheats inside TempAR/CWCheat.
+   - CWCheat requires all 4 parts of the `Uncensored Cards` cheat to be enabled for it to work otherwise the game/system will crash.
+6. If you've done everything correctly after turning the cheats on in TempAR/CWCheat the mods should now work (certain areas may need to be reloaded if you enable the codes while in them, for example: if the codes are enabled in the Shop the Shop area might need to be reloaded for the codes to work).
 
 # Installation (Emulator)
 1. Download the latest version of [PPSSPP](https://www.ppsspp.org/).
@@ -55,14 +59,13 @@ The following installation guide assumes you have already set up your PSP with C
 3. Copy the generated `PSP` folder and its contents to `<ppsspp_root>\memstick\`.
 4. Copy the Codes from the `Codes\PPSSPP` folder for your region of the game to `<ppsspp_root>\memstick\PSP\Cheats\`.
 5. Turn on the installed cheats for the game inside PPSSPP for the game.
-6. If you've done everything correctly after turning the cheats on  in PPSSPP the mods should now work (certain areas may need to be reloaded if you enable the codes while in them, for example: if the codes are enabled in the Shop the Shop area might need to be reloaded for the codes to work).
+6. If you've done everything correctly after turning the cheats on in PPSSPP the mods should now work (certain areas may need to be reloaded if you enable the codes while in them, for example: if the codes are enabled in the Shop the Shop area might need to be reloaded for the codes to work).
 
 # Known Issues
 - TempAR will fail to boot the game on real hardware if the patches are enabled at boot. There are two ways to get around this:
   - Bringing up TempAR's menu before the game can boot and waiting for the game to check the memory card data to exit out of its menu.
   - Enabling the cheats only once the game has finished booting up and not saving them to auto-enable on boot.
 - CWCheat will fail to apply the cheats fast enough for the game to be able to play the Title Screen voices on boot as the title screen code gets loaded very early on.
-- CWCheat will hard crash the console if the Uncensored Cards cheat is used.
 
 # Nuget Packages
 - [XDeltaSharp](https://github.com/pleonex/xdelta-sharp) - Allowing the xdelta patches to be applied by code.
