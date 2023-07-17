@@ -19,6 +19,15 @@ All in-game selectable languages are supported.**
 
 - Uncensored Cards
   - Allows the game to display the Japanese Artwork of cards, Uncensored FMVs for special monster animations and other card related effects whilst keeping the game's currently selected language.
+
+<div align="center">
+	<img src="./Images/ExampleCardAlbumCensored1.png" align="center" width=400/> -> <img src="./Images/ExampleCardAlbumUncensored1.png" align="center" width=400/>
+</div><br/>
+
+<div align="center">
+	<img src="./Images/ExampleDeckEditorCensored1.png" align="center" width=400/> -> <img src="./Images/ExampleDeckEditorUncensored1.png" align="center" width=400/>
+</div><br/>
+
 <div align="center">
 	<img src="./Images/ExampleCensoredFMV1.png" align="center" width=400/> -> <img src="./Images/ExampleUncensoredFMV1.png" align="center" width=400/>
 </div><br/>
