@@ -19,19 +19,27 @@ using (var stream = File.OpenRead(args[0]))
     bool isEuropean = false;
 
     var hash = VerifyFileIntegrity(stream);
+    if (hash == HashEuropean)
+        isEuropean = true;
+
     if (String.IsNullOrEmpty(hash))
     {
         Console.WriteLine($"Incorrect game backup detected.\nPlease provide a clean backup of either ULES-00600 or ULUS-10136.\nULES-00600 MD5: {HashEuropean.Replace('-', new())}\nULUS-10136 MD5: {HashAmerican.Replace('-', new())}");
+        Environment.Exit(0);
     }
-
-    if (hash == HashEuropean)
-        isEuropean = true;
+    else
+    {
+        string gameId = isEuropean ? "ULES-00600" : "ULUS-10136";
+        Console.WriteLine($"Yu-Gi-Oh! GX Tag Force ({gameId}) game backup detected. Proceeding with patching...");
+    }
 
     ExtractFilesFromIso(stream, isEuropean);
 }
 
 string VerifyFileIntegrity(FileStream? stream)
 {
+    Console.WriteLine("Verifying integrity of game backup...");
+
     if (stream == null)
         return "";
 
@@ -290,7 +298,8 @@ void ExtractFilesFromIso(FileStream? isoStream, bool isEuropean)
     {
         foreach (var fileName in fileList)
         {
-            string deltaPatchName = Path.ChangeExtension($@"XDelta\{fileName}", ".xdelta");
+            string gameId = isEuropean ? "ULES-00600" : "ULUS-10136";
+            string deltaPatchName = Path.ChangeExtension($@"XDelta\{gameId}\{fileName}", ".xdelta");
             string outFileName = $@"PSP\MODS\TAGFORCE\{fileName}";
 
             ApplyDeltaPatch(reader, $@"PSP_GAME\USRDIR\{fileName}", deltaPatchName, outFileName);
