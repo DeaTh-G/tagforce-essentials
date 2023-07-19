@@ -45,14 +45,14 @@ _L 0x2008BD14 0x024E102A // Check if s2 is less than t6
 _L 0x2008BD18 0x1440002C // Jump out if it is
 _L 0x2008BD1C 0x024F102A // Check if s2 is less than t7
 _L 0x2008BD20 0x14400001 // Continue custom code if it is
-_L 0x2008BD24 0x0A2224FF // Jump out if it isn't
-_L 0x2008BD28 0x3C050888 // Load %hi of "card/card" into a1
+_L 0x2008BD24 0x0A222F73 // Jump out if it isn't
+_L 0x2008BD28 0x3C050889 // Load %hi of "card/card" into a1
 _L 0x2008BD2C 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x2008BD30 0x24060009 // Store 0x9 in a2 (we use this to compare only up to "card/card" so that every permutation gets loaded from memstick)
 _L 0x2008BD34 0x0E203726 // Call memcmp
 _L 0x2008BD38 0x24A5BE80 // Load %lo of "card/card" into a1
 _L 0x2008BD3C 0x10400029 // Jump out to address if result of memcmp is 0
-_L 0x2008BD40 0x3C050888 // Load %hi of "deck/all_" into a1
+_L 0x2008BD40 0x3C050889 // Load %hi of "deck/all_" into a1
 _L 0x2008BD44 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x2008BD48 0x0E204486 // Call strcmp
 _L 0x2008BD4C 0x24A5BE8C // Load %lo of "deck/all_" into a1
@@ -62,28 +62,28 @@ _L 0x2008BD58 0x2484FFF6 // Restore a0's original value by shifting it back by 1
 _L 0x2008BD5C 0x0E203726 // Call memcmp
 _L 0x2008BD60 0x24A5FFF6 // Restore a1's original value by shifting it back by 10 bytes
 _L 0x2008BD64 0x1040001F // Jump out to address if result of memcmp is 0
-_L 0x2008BD68 0x3C050888 // Load %hi of "movie/rampart_summon_a.pmf" into a1
+_L 0x2008BD68 0x3C050889 // Load %hi of "movie/rampart_summon_a.pmf" into a1
 _L 0x2008BD6C 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x2008BD70 0x0E204486 // Call strcmp
 _C0 Uncensored Cards II
 _L 0x2008BD74 0x24A5BE98 // Load %lo of "movie/rampart_summon_a.pmf" into a1
 _L 0x2008BD78 0x1040001A // Jump out to address if result of strcmp is 0
-_L 0x2008BD7C 0x3C050888 // Load %hi of "movie/rampart_attack_a.pmf" into a1
+_L 0x2008BD7C 0x3C050889 // Load %hi of "movie/rampart_attack_a.pmf" into a1
 _L 0x2008BD80 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x2008BD84 0x0E204486 // Call strcmp
 _L 0x2008BD88 0x24A5BEB4 // Load %lo of "movie/rampart_attack_a.pmf" into a1
 _L 0x2008BD8C 0x10400015 // Jump out to address if result of strcmp is 0
-_L 0x2008BD90 0x3C050888 // Load %hi of "movie/cyb_summon_a.pmf" into a1
+_L 0x2008BD90 0x3C050889 // Load %hi of "movie/cyb_summon_a.pmf" into a1
 _L 0x2008BD94 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x2008BD98 0x0E204486 // Call strcmp
 _L 0x2008BD9C 0x24A5BED0 // Load %lo of "movie/cyb_summon_a.pmf" into a1
 _L 0x2008BDA0 0x10400010 // Jump out to address if result of strcmp is 0
-_L 0x2008BDA4 0x3C050888 // Load %hi of "movie/cyb_attack_a.pmf" into a1
+_L 0x2008BDA4 0x3C050889 // Load %hi of "movie/cyb_attack_a.pmf" into a1
 _L 0x2008BDA8 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x2008BDAC 0x0E204486 // Call strcmp
 _L 0x2008BDB0 0x24A5BEE8 // Load %lo of "movie/cyb_attack_a.pmf" into a1
 _L 0x2008BDB4 0x1040000B // Jump out to address if result of strcmp is 0
-_L 0x2008BDB8 0x3C050888 // Load %hi of "movie/ouijaboard_final.pmf" into a1
+_L 0x2008BDB8 0x3C050889 // Load %hi of "movie/ouijaboard_final.pmf" into a1
 _L 0x2008BDBC 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x2008BDC0 0x0E204486 // Call strcmp
 _L 0x2008BDC4 0x24A5BF00 // Load %lo of "movie/ouijaboard_final.pmf" into a1
@@ -94,16 +94,16 @@ _L 0x2008BDD4 0x03602821 // Restore a1 from k1
 _L 0x2008BDD8 0x00A41025 // Execute original instruction
 _L 0x2008BDDC 0x0A2044A4 // Jump back to original address to continue code execution
 
-_L 0x2008BDE4 0x3C050888 // Load %hi of "disc0:/PSP_GAME/USRDIR/" into a1
+_L 0x2008BDE4 0x3C050889 // Load %hi of "disc0:/PSP_GAME/USRDIR/" into a1
 _L 0x2008BDE8 0x03602021 // Load currently being looked up file path from k1 into a0
 _L 0x2008BDEC 0x0E204486 // Call strcmp
 _C0 Uncensored Cards III
 _L 0x2008BDF0 0x24A5BE50 // Load %lo of "disc0:/PSP_GAME/USRDIR/" into a1
 _L 0x2008BDF4 0x10400001 // Jump out to address if result of strcmp is 0
-_L 0x2008BDF8 0x0A225171 // Jump back in memory (Restore ra from t8)
-_L 0x2008BDFC 0x3C050888 // Load %hi of stored path "ms0:/PSP/MODS/TAGFORCE/" into a1
+_L 0x2008BDF8 0x0A222F73 // Jump back in memory (Restore ra from t8)
+_L 0x2008BDFC 0x3C050889 // Load %hi of stored path "ms0:/PSP/MODS/TAGFORCE/" into a1
 _L 0x2008BE00 0x24BBBE68 // Load %lo of stored path "ms0:/PSP/MODS/TAGFORCE/" into a1
-_L 0x2008BE04 0x0A225171 // Jump back in memory (Restore ra from t8)
+_L 0x2008BE04 0x0A222F73 // Jump back in memory (Restore ra from t8)
 
 // Change "FINAL" to "DEATH" when one of the Destiny Board/Spirit Message cards are played.
 _L 0xD122A850 0x00000001
@@ -160,7 +160,7 @@ _L 0x2008BED4 0x79632F65
 _L 0x2008BED8 0x75735F62
 _L 0x2008BEDC 0x6E6F6D6D
 _L 0x2008BEE0 0x702E615F
-_L 0x1008BEE4 0x0000666D
+_L 0x2008BEE4 0x0000666D
 
 // Store "movie/cyb_attack_a.pmf" in memory
 _L 0x2008BEE8 0x69766F6D
@@ -168,7 +168,7 @@ _L 0x2008BEEC 0x79632F65
 _L 0x2008BEF0 0x74615F62
 _L 0x2008BEF4 0x6B636174
 _L 0x2008BEF8 0x702E615F
-_L 0x1008BEFC 0x0000666D
+_L 0x2008BEFC 0x0000666D
 
 // Store "movie/ouijaboard_final.pmf" in memory
 _L 0x2008BF00 0x69766F6D
@@ -177,4 +177,4 @@ _L 0x2008BF08 0x62616A69
 _L 0x2008BF0C 0x6472616F
 _L 0x2008BF10 0x6E69665F
 _L 0x2008BF14 0x702E6C61
-_L 0x1008BF18 0x0000666D
+_L 0x2008BF18 0x0000666D
