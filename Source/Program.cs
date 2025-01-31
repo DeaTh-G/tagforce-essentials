@@ -299,7 +299,7 @@ void ExtractFilesFromIso(FileStream? isoStream, bool isEuropean)
         foreach (var fileName in fileList)
         {
             string gameId = isEuropean ? "ULES-00600" : "ULUS-10136";
-            string deltaPatchName = Path.ChangeExtension($@"XDelta\{gameId}\{fileName}", ".xdelta");
+            string deltaPatchName = Path.ChangeExtension($@"{AppDomain.CurrentDomain.BaseDirectory}\XDelta\{gameId}\{fileName}", ".xdelta");
             string outFileName = $@"PSP\MODS\TAGFORCE\{fileName}";
 
             ApplyDeltaPatch(reader, $@"PSP_GAME\USRDIR\{fileName}", deltaPatchName, outFileName);
