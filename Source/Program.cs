@@ -7,7 +7,7 @@ Dictionary<string, string> Hashes = new Dictionary<string, string>()
 {
     { "71-9C-99-47-80-32-A4-21-0A-E8-77-83-20-61-E9-FD", "Yu-Gi-Oh! GX: Tag Force (ULES-00600)" },              // Tag Force PAL
     { "9C-84-D0-0F-5A-4C-19-C3-8C-38-B4-5A-C1-BE-3C-FF", "Yu-Gi-Oh! GX: Tag Force (ULUS-10136)" },              // Tag Force NTSC
-    { "17-D5-0A-AF-4A-E6-88-0B-33-0C-D4-16-DA-25-17-4B", "Yu-Gi-Oh! GX: Tag Force 2 (ULES-00925 (v1.01))" },    // Tag Force 2 (v1.01) PAL
+    { "81-CB-1D-EE-06-D3-27-8B-26-FE-4B-F5-74-BC-2E-36", "Yu-Gi-Oh! GX: Tag Force 2 (ULES-00925 (v1.01))" },    // Tag Force 2 (v1.01) PAL
     // { "XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX", "Yu-Gi-Oh! GX: Tag Force 2 (ULES-00925 (v2.00))" },    // Tag Force 2 (v2.00) PAL
     // { "XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX", "Yu-Gi-Oh! GX: Tag Force 2 (ULUS-10302)" },            // Tag Force 2 NTSC
     // { "XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX", "Yu-Gi-Oh! GX: Tag Force 3 (ULES-01183)" },            // Tag Force 3 PAL
@@ -571,12 +571,13 @@ using (var stream = File.OpenRead(args[0]))
         Directory.Delete("PSP", true);
 
     var hash = VerifyFileIntegrity(stream);
-    if (string.IsNullOrEmpty(hash))
+    if (string.IsNullOrEmpty(hash) || !Hashes.ContainsKey(hash))
     {
         Console.WriteLine("Incorrect game backup detected.");
         Console.WriteLine("Please provide a clean backup of one of following supported titles:");
         foreach (var pair in Hashes)
         {
+            Console.WriteLine($"Incorrect MD5 ({hash.Replace('-', new())}) detected.");
             Console.WriteLine($"{pair.Value} MD5: {pair.Key.Replace('-', new())}");
         }
         Environment.Exit(0);
@@ -601,7 +602,7 @@ string VerifyFileIntegrity(FileStream? stream)
     if (Hashes.ContainsKey(hash))
         return hash;
 
-    return "";
+    return hash;
 }
 
 void ExtractFilesFromIso(FileStream? isoStream, string hash)
@@ -609,14 +610,17 @@ void ExtractFilesFromIso(FileStream? isoStream, string hash)
     using (var reader = new CDReader(isoStream, true))
     {
         List<string> fileList = new();
+        string gameName = "";
         switch (hash)
         {
             case "71-9C-99-47-80-32-A4-21-0A-E8-77-83-20-61-E9-FD":
             case "9C-84-D0-0F-5A-4C-19-C3-8C-38-B4-5A-C1-BE-3C-FF":
+                gameName = "TAGFORCE";
                 fileList = TagForce1FileList;
                 break;
-            case "17-D5-0A-AF-4A-E6-88-0B-33-0C-D4-16-DA-25-17-4B":
+            case "81-CB-1D-EE-06-D3-27-8B-26-FE-4B-F5-74-BC-2E-36":
                 fileList = TagForce2FileList;
+                gameName = "TAGFORCE2";
                 break;
             default:
                 Console.WriteLine("Could not locate the appropriate list of files to extract from ISO. Exiting...");
@@ -626,9 +630,9 @@ void ExtractFilesFromIso(FileStream? isoStream, string hash)
 
         foreach (var fileName in fileList)
         {
-            string gameId = Regex.Match(hash, @"\b[A-Z]{4}-\d{5}\b(?:\s*\(v\d+(?:\.\d+)*\))?").Value;
+            string gameId = Regex.Match(Hashes[hash], @"\b[A-Z]{4}-\d{5}\b(?:\s*\(v\d+(?:\.\d+)*\))?").Value;
             string deltaPatchName = Path.ChangeExtension($@"{AppDomain.CurrentDomain.BaseDirectory}\XDelta\{gameId}\{fileName}", ".xdelta");
-            string outFileName = $@"PSP\MODS\TAGFORCE\{fileName}";
+            string outFileName = $@"PSP\MODS\{gameName}\{fileName}";
 
             ApplyDeltaPatch(reader, $@"PSP_GAME\USRDIR\{fileName}", deltaPatchName, outFileName);
         }
