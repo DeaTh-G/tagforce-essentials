@@ -6,6 +6,10 @@
     <RootNamespace>tagforce_essentials</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+	<IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+
+	<FileVersion>1.2</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
