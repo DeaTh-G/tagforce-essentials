@@ -9,22 +9,22 @@ Dictionary<string, string> Hashes = new Dictionary<string, string>()
     { "9C-84-D0-0F-5A-4C-19-C3-8C-38-B4-5A-C1-BE-3C-FF", "Yu-Gi-Oh! GX: Tag Force (ULUS-10136)" },              // Tag Force NTSC
     { "81-CB-1D-EE-06-D3-27-8B-26-FE-4B-F5-74-BC-2E-36", "Yu-Gi-Oh! GX: Tag Force 2 (ULES-00925 (v1.01))" },    // Tag Force 2 (v1.01) PAL
     { "7B-1C-B3-6D-BF-2B-96-B3-8B-14-B3-FA-44-B2-FA-A7", "Yu-Gi-Oh! GX: Tag Force 2 (ULES-00925 (v2.00))" },    // Tag Force 2 (v2.00) PAL
-    // { "XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX", "Yu-Gi-Oh! GX: Tag Force 2 (ULUS-10302)" },            // Tag Force 2 NTSC
+    { "D0-3F-5A-02-AD-2D-2F-EF-16-A4-21-86-E9-51-D8-6E", "Yu-Gi-Oh! GX: Tag Force 2 (ULUS-10302)" },            // Tag Force 2 NTSC
     // { "XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX-XX", "Yu-Gi-Oh! GX: Tag Force 3 (ULES-01183)" },            // Tag Force 3 PAL
 };
 
 List<string> TagForce1FileList = new()
 {
     @"card\cardh_e.cip",
-    @"card\cardh_f.cip", // Doesn't exist in NA version of the game
-    @"card\cardh_g.cip", // Doesn't exist in NA version of the game
-    @"card\cardh_i.cip", // Doesn't exist in NA version of the game
-    @"card\cardh_s.cip", // Doesn't exist in NA version of the game
+    @"card\cardh_f.cip", // Doesn't exist in the NA version of the game
+    @"card\cardh_g.cip", // Doesn't exist in the NA version of the game
+    @"card\cardh_i.cip", // Doesn't exist in the NA version of the game
+    @"card\cardh_s.cip", // Doesn't exist in the NA version of the game
     @"card\cardm_e.cip",
-    @"card\cardm_f.cip", // Doesn't exist in NA version of the game
-    @"card\cardm_g.cip", // Doesn't exist in NA version of the game
-    @"card\cardm_i.cip", // Doesn't exist in NA version of the game
-    @"card\cardm_s.cip", // Doesn't exist in NA version of the game
+    @"card\cardm_f.cip", // Doesn't exist in the NA version of the game
+    @"card\cardm_g.cip", // Doesn't exist in the NA version of the game
+    @"card\cardm_i.cip", // Doesn't exist in the NA version of the game
+    @"card\cardm_s.cip", // Doesn't exist in the NA version of the game
     @"deck\all_e.ehp",
     @"deck\all_f.ehp",
     @"deck\all_g.ehp",
@@ -110,12 +110,12 @@ List<string> TagForce1FileList = new()
     @"duel\result\result_j.ehp",
     @"duel\result\result_s.ehp",
     @"duel\start\start_all.ehp",
-    @"duel\start\start_s.ehp", // Doesn't exist in NA version of the game
-    @"duel\start\start_e.ehp", // Doesn't exist in NA version of the game
-    @"duel\start\start_f.ehp", // Doesn't exist in NA version of the game
-    @"duel\start\start_g.ehp", // Doesn't exist in NA version of the game
-    @"duel\start\start_i.ehp", // Doesn't exist in NA version of the game
-    @"duel\start\start_j.ehp", // Doesn't exist in NA version of the game
+    @"duel\start\start_s.ehp", // Doesn't exist in the NA version of the game
+    @"duel\start\start_e.ehp", // Doesn't exist in the NA version of the game
+    @"duel\start\start_f.ehp", // Doesn't exist in the NA version of the game
+    @"duel\start\start_g.ehp", // Doesn't exist in the NA version of the game
+    @"duel\start\start_i.ehp", // Doesn't exist in the NA version of the game
+    @"duel\start\start_j.ehp", // Doesn't exist in the NA version of the game
     @"duel\basic_be.ehp",
     @"duel\basic_bf.ehp",
     @"duel\basic_bg.ehp",
@@ -260,11 +260,12 @@ List<string> TagForce2FileList = new()
     @"deck\all_g.ehp",
     @"deck\all_i.ehp",
     @"deck\all_s.ehp",
-    @"duel\basic_be.ehp",
-    @"duel\basic_bf.ehp",
-    @"duel\basic_bg.ehp",
-    @"duel\basic_bi.ehp",
-    @"duel\basic_bs.ehp",
+    @"duel\basic_be.ehp", // Doesn't exist in the NA version of the game
+    @"duel\basic_bf.ehp", // Doesn't exist in the NA version of the game
+    @"duel\basic_bg.ehp", // Doesn't exist in the NA version of the game
+    @"duel\basic_bi.ehp", // Doesn't exist in the NA version of the game
+    @"duel\basic_bs.ehp", // Doesn't exist in the NA version of the game
+    @"duel\basic_ue.ehp", // Doesn't exist in the PAL version of the game
     @"card\card8_a.cip",
     @"card\cardh_e.cip",
     @"card\cardh_f.cip",
@@ -625,6 +626,7 @@ void ExtractFilesFromIso(FileStream? isoStream, string hash)
                 break;
             case "81-CB-1D-EE-06-D3-27-8B-26-FE-4B-F5-74-BC-2E-36":
             case "7B-1C-B3-6D-BF-2B-96-B3-8B-14-B3-FA-44-B2-FA-A7":
+            case "D0-3F-5A-02-AD-2D-2F-EF-16-A4-21-86-E9-51-D8-6E":
                 fileList = TagForce2FileList;
                 gameName = "TAGFORCE2";
                 break;
