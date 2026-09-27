@@ -441,7 +441,7 @@ _L 0x20102624 0x024E102A // Check if s2 is less than t6
 _L 0x20102628 0x1440002C // Jump out if it is
 _L 0x2010262C 0x024F102A // Check if s2 is less than t7
 _L 0x20102630 0x14400001 // Continue custom code if it is
-_L 0x20102634 0x0A2224FF // Jump out if it isn't
+_L 0x20102634 0x0A2409B8 // Jump out if it isn't
 _L 0x20102638 0x3C050890 // Load %hi of "card/card" into a1
 _L 0x2010263C 0x02402021 // Load currently being looked up filename from s2 into a0
 _L 0x20102640 0x24060009 // Store 0x9 in a2 (we use this to compare only up to "card/card" so that every permutation gets loaded from memstick)
@@ -500,6 +500,10 @@ _L 0x2010270C 0x0A2409B6 // Jump back in memory (Restore ra from t8)
 _L 0x20102710 0x3C050890 // Load %hi of stored path "ms0:/PSP/MODS/TAGFORCE2/" into a1
 _L 0x20102714 0x24BB301C // Load %lo of stored path "ms0:/PSP/MODS/TAGFORCE2/" into a1
 _L 0x20102718 0x0A2409B6 // Jump back in memory (Restore ra from t8)
+
+// Change "FINAL" to "DEATH" when one of the Destiny Board/Spirit Message cards are played.
+_L 0xC11A30B4 0x00002821
+_L 0x011A30B4 0x34050001
 
 // Store "disc0:/PSP_GAME/USRDIR/" in memory
 _L 0x20103004 0x63736964
