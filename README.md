@@ -1,7 +1,14 @@
 # tagforce-essentials
-A collection of mods made by myself for Yu-Gi-Oh! GX Tag Force PSP.  
-**Both European (ULES-00600) and American (ULUS-10136) versions of the game are supported.  
-All in-game selectable languages are supported.**
+A collection of mods made by myself for (some of) the games in the Yu-Gi-Oh! GX Tag Force series PSP titles.
+Currently supported titles:
+| Game Title               | Region Code | Serial Number | Version |
+| ------------------------ | ----------- | ------------- | ------- |
+| Yu-Gi-Oh! GX Tag Force   | PAL         | ULES-00600    | v1.01   |
+| Yu-Gi-Oh! GX Tag Force   | NTSC        | ULUS-10136    | v1.03   |
+| Yu-Gi-Oh! GX Tag Force 2 | PAL         | ULES-00925    | v1.01   |
+| Yu-Gi-Oh! GX Tag Force 2 | PAL         | ULES-00925    | v2.00   | 
+| Yu-Gi-Oh! GX Tag Force 2 | NTSC        | ULUS-10302    | v1.02   |
+| ~~Yu-Gi-Oh! GX Tag Force 3~~ | ~~PAL~~ | ~~ULES-01183~~ | ~~v1.02~~ |
 
 ## Included Mods [UMD Compatible]
 - Japanese Voice Enabler
