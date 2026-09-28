@@ -1,7 +1,14 @@
 # tagforce-essentials
-A collection of mods made by myself for Yu-Gi-Oh! GX Tag Force PSP.  
-**Both European (ULES-00600) and American (ULUS-10136) versions of the game are supported.  
-All in-game selectable languages are supported.**
+A collection of mods made by myself for (some of) the games in the Yu-Gi-Oh! GX Tag Force series PSP titles.
+Currently supported titles:
+| Game Title               | Region Code | Serial Number | Version |
+| ------------------------ | ----------- | ------------- | ------- |
+| Yu-Gi-Oh! GX Tag Force   | PAL         | ULES-00600    | v1.01   |
+| Yu-Gi-Oh! GX Tag Force   | NTSC        | ULUS-10136    | v1.03   |
+| Yu-Gi-Oh! GX Tag Force 2 | PAL         | ULES-00925    | v1.01   |
+| Yu-Gi-Oh! GX Tag Force 2 | PAL         | ULES-00925    | v2.00   | 
+| Yu-Gi-Oh! GX Tag Force 2 | NTSC        | ULUS-10302    | v1.02   |
+| ~~Yu-Gi-Oh! GX Tag Force 3~~ | ~~PAL~~         | ~~ULES-01183~~    | ~~v1.02~~   |
 
 ## Included Mods [UMD Compatible]
 - Japanese Voice Enabler
@@ -43,11 +50,11 @@ The following installation guide assumes you have already set up your PSP with C
    - (Alternatively run the exe in command line as the following: `tagforce-essentials.exe <path_to_iso>`)
 2. Connect your PSP with USB to copy files to Memory Stick.
 3. Copy the generated `PSP` folder and its contents to the Memory Stick's root.
-4. Install the cheats found in the `Codes\PSP` folder to your installed Cheat Engine of choice.
+4. Install the cheats found in the `Codes\<game_name>\<region_name>\PSP` folder to your installed Cheat Engine of choice.
    1. TempAR:
-      - Copy the appropriate `*.db` file for your region of the game from `Codes\PSP\TempAR\` to `<psp_root>\seplugins\TempAR\cheats\`.
+      - Copy the appropriate `*.db` file for your region of the game from `Codes\<game_name>\<region_name>\PSP\TempAR\` to `<psp_root>\seplugins\TempAR\cheats\`.
    2. CWCheat:
-      - Copy the contents of the appropriate `*.db` file for your region of the game from `Codes\PSP\CWCheat\` into the `CHEAT.db` file found in `<psp_root>\seplugins\cwcheat\`.
+      - Copy the contents of the appropriate `*.db` file for your region of the game from `Codes\<game_name>\<region_name>\PSP\CWCheat\` into the `CHEAT.db` file found in `<psp_root>\seplugins\cwcheat\`.
 5. Unplug the PSP and boot up the game and enable the cheats inside TempAR/CWCheat.
    - CWCheat requires all 4 parts of the `Uncensored Cards` cheat to be enabled for it to work otherwise the game/system will crash.
 6. If you've done everything correctly after turning the cheats on in TempAR/CWCheat the mods should now work (certain areas may need to be reloaded if you enable the codes while in them, for example: if the codes are enabled in the Shop the Shop area might need to be reloaded for the codes to work).
@@ -57,7 +64,7 @@ The following installation guide assumes you have already set up your PSP with C
 2. Drag and Drop the ISO backup of the game onto `tagforce-essentials.exe`.
    - (Alternatively run the exe in command line as the following: `tagforce-essentials.exe <path_to_iso>`)
 3. Copy the generated `PSP` folder and its contents to `<ppsspp_root>\memstick\`.
-4. Copy the Codes from the `Codes\PPSSPP` folder for your region of the game to `<ppsspp_root>\memstick\PSP\Cheats\`.
+4. Copy the Codes from the `Codes\<game_name>\<region_name>\PPSSPP` folder for your region of the game to `<ppsspp_root>\memstick\PSP\Cheats\`.
 5. Turn on the installed cheats for the game inside PPSSPP for the game.
 6. If you've done everything correctly after turning the cheats on in PPSSPP the mods should now work (certain areas may need to be reloaded if you enable the codes while in them, for example: if the codes are enabled in the Shop the Shop area might need to be reloaded for the codes to work).
 
