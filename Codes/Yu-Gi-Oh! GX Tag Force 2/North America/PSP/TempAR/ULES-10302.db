@@ -491,7 +491,7 @@ _L 0x20102718 0x0A2409B6 // Jump back in memory (Restore ra from t8)
 
 // Change "FINAL" to "DEATH" when one of the Destiny Board/Spirit Message cards are played.
 _L 0xC11A605C 0x00002821
-_L 0x011A605C 0x34050001
+_L 0x211A605C 0x34050001
 
 // Store "disc0:/PSP_GAME/USRDIR/" in memory
 _L 0x20103004 0x63736964
